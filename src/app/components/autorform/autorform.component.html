@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="card bg-light mb-3">
+  <div class="card-header">{{titulo}}</div>
+  <div class="card-body">
+      <button class="btn btn-secondary my-2" routerLink="/autor">volver</button>
+      <form>
+          <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" class="form-control" id="nombre"
+              [(ngModel)]="autor.nombre">
+          </div>
+          <div class="form-group">
+              <label for="apellido">Apellidos</label>
+              <input type="text" name="apellido" class="form-control" id="apellido"
+              [(ngModel)]="autor.apellido">
+          </div>
+          <div class="form-group">
+            <label for="nacionalidad">Nacionalidad</label>
+            <input type="text" name="nacionalidad" class="form-control" id="nacionalidad"
+            [(ngModel)]="autor.nacionalidad">
+        </div>
+        <div class="form-group">
+          <label for="fechanacimiento">Fecha nacimiento</label>
+          <input type="text" name="fechanacimiento" class="form-control" id="fechanacimiento"
+          [(ngModel)]="autor.fechanacimiento">
+      </div>
+
+          <div class="form-group">
+              <button type="button" class="btn btn-primary"
+              (click)="crear()">Guardar
+              </button>
+          </div>
+      </form>
+  </div>
+</div>
+
+

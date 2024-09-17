@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="card bg-light mb-3">
+  <div class="card-header">{{titulo}}</div>
+  <div class="card-body">
+      <button class="btn btn-primary my-2" routerLink="/autor/form">crear</button>
+      <div class="alert alert-info" *ngIf="listadoAutor?.length==0">
+          No hay registros en el sistema.
+      </div>
+      <table class="table table-hover table-striped" *ngIf="listadoAutor.length>0">
+          <thead>
+              <tr>
+                  <th>id</th>
+                  <th>nombre</th>
+                  <th>apellido</th>
+                  <th>nacionalidad</th>
+                  <th>fechanacimiento</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let autor of listadoAutor">
+                  <td>{{autor.idautor}}</td>
+                  <td>{{autor.nombre}}</td>
+                  <td>{{autor.apellido}}</td>
+                  <td>{{autor.nacionalidad}}</td>
+                  <td>{{autor.fechanacimiento}}</td>
+                  <td><button class="btn btn-secondary btn-sm"
+                      >
+                      editar
+                  </button></td>
+                  <td><button class="btn btn-danger btn-sm">
+                      eliminar
+                  </button></td>
+              </tr>
+          </tbody>
+      </table>
+     </div>
+</div>
+

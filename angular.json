@@ -78,7 +78,10 @@
               "buildTarget": "app-editorial-front:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -106,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "e289aa68-61ce-44c0-8dd6-fda02ed7c62f"
   }
 }
